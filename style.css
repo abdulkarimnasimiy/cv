@@ -1,0 +1,387 @@
+/* =========================
+   RESET + TOKENS
+========================= */
+*{ margin:0; padding:0; box-sizing:border-box; }
+
+:root{
+  --bg: #f4f6f9;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --line: #e5e7eb;
+
+  --primary: #2563eb;
+  --primary-soft: #eff6ff;
+
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(15,23,42,.08);
+
+  --font: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+html, body{ height:100%; }
+body{
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a{ color: inherit; text-decoration: none; }
+a:hover{ text-decoration: underline; text-decoration-color: rgba(37,99,235,.5); }
+
+/* =========================
+   PAGE WRAPPER
+========================= */
+.page{
+  max-width: 1100px;
+  margin: 34px auto;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* =========================
+   TOPBAR / HEADER
+========================= */
+.topbar{
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: start;
+
+  padding: 26px 28px 18px;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(37,99,235,.08), rgba(255,255,255,0));
+}
+
+/* LEFT header content */
+.who .name{
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 6px;
+}
+
+.role{
+  font-size: 14px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.dot{
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(37,99,235,.95);
+  transform: translateY(-1px);
+}
+
+.pill{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.7);
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.pill b{ color: var(--text); font-weight: 800; }
+
+/* Quick links (chips) */
+.quick-links{
+  display: flex;
+  gap: 10px;
+  margin: 10px 0 10px;
+  flex-wrap: wrap;
+}
+
+.quick-links a{
+  font-size: 13px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #f8fafc;
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.quick-links a:hover{
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+  text-decoration: none;
+}
+
+.summary{
+  margin-top: 8px;
+  max-width: 70ch;
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* RIGHT header content */
+.contact{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  text-align: right;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* If you added profile photo inside contact/right block */
+.header-right{ display:flex; justify-content:flex-end; }
+
+/* Profile image (IMPORTANT: print-safe) */
+.profile-photo{
+  width: 140px;        /* tavsiya: 140 */
+  height: 140px;
+  border-radius: 50%;  /* dumaloq */
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: var(--shadow);
+}
+
+/* OPTIONAL: agar PDF’da pastga tushayotgan bo‘lsa,
+   rasmni absolute qilib qo‘yamiz va topbar’ga joy qoldiramiz */
+.topbar.has-photo{
+  padding-right: 200px;  /* absolute foto uchun joy */
+}
+.topbar.has-photo .profile-photo{
+  position: absolute;
+  top: 20px;
+  right: 22px;
+}
+
+/* =========================
+   BODY GRID
+========================= */
+.content{
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  gap: 18px;
+  padding: 18px 28px 26px;
+}
+
+.col{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* =========================
+   CARDS
+========================= */
+.card{
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(15,23,42,.06);
+}
+
+.head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.head h2{
+  font-size: 13px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.badge{
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--primary);
+  background: var(--primary-soft);
+  border: 1px solid rgba(37,99,235,.18);
+  padding: 6px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* =========================
+   ITEMS (Projects / Education)
+========================= */
+.item{
+  padding: 12px 0;
+  border-top: 1px dashed var(--line);
+}
+.item:first-of-type{
+  border-top: 0;
+  padding-top: 0;
+}
+
+.item-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.item-top h3{
+  font-size: 14.5px;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+
+.meta{
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.meta a{
+  color: var(--primary);
+  font-weight: 800;
+  text-decoration: none;
+}
+.meta a:hover{ text-decoration: underline; }
+
+.sub{
+  margin: 4px 0 8px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+/* bullets */
+.bullets{
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.bullets li{ margin: 6px 0; }
+
+.bullets-tight li{ margin: 5px 0; }
+
+/* =========================
+   SKILLS CHIPS
+========================= */
+.chips{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip{
+  background: #f1f5f9;
+  border: 1px solid var(--line);
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+/* =========================
+   KEY-VALUE (Highlights / Languages)
+========================= */
+.kv{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 0;
+  border-top: 1px dashed var(--line);
+  font-size: 13px;
+}
+.kv:first-of-type{ border-top: 0; padding-top: 0; }
+
+.k{ color: var(--muted); }
+.v{ color: var(--text); font-weight: 900; }
+
+/* =========================
+   LINKS LIST
+========================= */
+.links{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.links a{
+  color: var(--primary);
+  font-weight: 900;
+  text-decoration: none;
+}
+.links a:hover{ text-decoration: underline; }
+
+/* =========================
+   FOOTER NOTE
+========================= */
+.foot{
+  padding: 0 28px 22px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 860px){
+  .topbar{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .contact{
+    align-items: flex-start;
+    text-align: left;
+  }
+  .content{
+    grid-template-columns: 1fr;
+  }
+  .profile-photo{
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* =========================
+   PRINT / PDF SAFE
+========================= */
+@media print{
+  body{ background: #fff; }
+  .page{
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .card{
+    box-shadow: none;
+  }
+
+  /* Agar print’da rasm pastga tushsa: topbar.has-photo ishlating */
+  .topbar.has-photo{
+    padding-right: 200px;
+    min-height: 170px;
+  }
+  .topbar.has-photo .profile-photo{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  a{ text-decoration: none; }
+}

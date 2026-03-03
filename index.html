@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karimjon Komilov — CV</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <main class="page">
+
+    <!-- HEADER -->
+    <header class="topbar has-photo">
+      <div class="header-left">
+        <h1>Karimjon Komilов</h1>
+        <p class="role">Junior Frontend Developer (Верстальщик) · Ташкент · Удалённо</p>
+
+        <div class="quick-links">
+          <a href="https://github.com/abdulkarimnasimiy" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://nasimiy.netlify.app" target="_blank" rel="noreferrer">Портфолио</a>
+          <a href="https://retaylx-landing.netlify.app" target="_blank" rel="noreferrer">Retaylx Landing</a>
+        </div>
+
+        <p class="summary">
+          Junior Frontend-разработчик / верстальщик для лендингов под рекламный трафик.
+          Быстро собираю и правлю landing pages: формы, валидация, редиректы/thank-you, UTM-метки,
+          аккуратная работа с чужим кодом. Стек: HTML/CSS/JS + React.
+          Использую AI-инструменты (ChatGPT и др.) для ускорения разработки.
+        </p>
+      </div>
+
+      <div class="header-right">
+        <img src="profile.jpg" alt="Karimjon Komilov" class="profile-photo">
+      </div>
+    </header>
+
+    <!-- BODY -->
+    <section class="content">
+
+      <!-- LEFT -->
+      <section class="col col-left">
+
+        <!-- Projects -->
+        <section class="card">
+          <div class="head">
+            <h2>Проекты</h2>
+            <span class="badge">Proof of work</span>
+          </div>
+
+          <article class="item">
+            <div class="item-top">
+              <h3>Retaylx — Конверсионный лендинг (HTML/CSS/JS)</h3>
+              <div class="meta">
+                <a href="https://retaylx-landing.netlify.app/" target="_blank" rel="noreferrer">Live</a> ·
+                <a href="https://github.com/abdulkarimnasimiy/retaylx-landing" target="_blank"
+                  rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+
+            <p class="sub">
+              Лендинг под рекламный трафик для Retail ERP: один главный CTA, форма заявки и сценарий thank-you.
+            </p>
+
+            <ul class="bullets">
+              <li>Собрал структуру под конверсию: hero → доказательства → форма → thank-you.</li>
+              <li>Реализовал форму: валидация, UX-ошибки, проверка телефона, чекбокс согласия.</li>
+              <li>Сбор UTM-меток и подготовка данных лида (готово к подключению трекера).</li>
+              <li>Sticky CTA + scarcity (лимит слотов/таймер) как элементы paid-traffic воронки.</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="item-top">
+              <h3>ERP-платформа (React + Redux)</h3>
+              <div class="meta">
+                <a href="https://market-erp.netlify.app/" target="_blank" rel="noreferrer">Live</a> ·
+                <a href="https://github.com/abdulkarimnasimiy/erp-frontend-project" target="_blank"
+                  rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+
+            <p class="sub">
+              Retail ERP dashboard: продажи, склад, отчёты. Модульный UI, таблицы, фильтрация и состояния интерфейса.
+            </p>
+
+            <ul class="bullets">
+              <li>Построил интерфейс на <strong>React</strong> с компонентной архитектурой и едиными правилами
+                layout/отступов.</li>
+              <li>Управлял состоянием через <strong>Redux</strong>: общие данные, UI-состояния и предсказуемые обновления
+                между страницами.</li>
+              <li>Реализовал паттерны фильтрации/поиска/сортировки и UI-состояния (loading/empty/error).</li>
+              <li>Организовал код для масштабирования: переиспользуемые блоки, разделение по модулям, читабельная
+                структура.</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="item-top">
+              <h3>Погодное приложение (JavaScript + API)</h3>
+              <div class="meta">
+                <a href="https://weather-app-nasimiy.netlify.app/" target="_blank" rel="noreferrer">Live</a> ·
+                <a href="https://github.com/abdulkarimnasimiy/weather-app" target="_blank"
+                  rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+
+            <p class="sub">
+              Приложение показывает актуальную погоду по поиску города и обновляет интерфейс на основе ответа API.
+            </p>
+
+            <ul class="bullets">
+              <li>Подключил внешний <strong>Weather API</strong> и вывел основные параметры (температура, состояние,
+                дата).</li>
+              <li>Использовал <strong>async/await</strong> для запросов и обработки данных.</li>
+              <li>Сделал поиск с валидацией, обработкой ошибок и пустых результатов.</li>
+              <li>Собрал адаптивный UI с понятной подачей данных.</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="item-top">
+              <h3>To-Do приложение (JavaScript)</h3>
+              <div class="meta">
+                <a href="https://to-do-nasimiy.netlify.app/" target="_blank" rel="noreferrer">Live</a> ·
+                <a href="https://github.com/abdulkarimnasimiy/to-do-app" target="_blank"
+                  rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+
+            <p class="sub">
+              Менеджер задач с удобным взаимодействием и сохранением данных между сессиями.
+            </p>
+
+            <ul class="bullets">
+              <li>Реализовал <strong>CRUD</strong>: добавление, выполнение, удаление, фильтрация задач.</li>
+              <li>Добавил приоритеты, дедлайны и визуальные статусы.</li>
+              <li>Сохранял задачи через <strong>localStorage</strong>.</li>
+              <li>Улучшил UX: переключение темы и адаптивная верстка.</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="item-top">
+              <h3>Memory Card Game (JavaScript)</h3>
+              <div class="meta">
+                <a href="https://card-game-nasimiy.netlify.app/" target="_blank" rel="noreferrer">Live</a> ·
+                <a href="https://github.com/abdulkarimnasimiy/card-game" target="_blank"
+                  rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+
+            <p class="sub">
+              Браузерная игра на логику: механика переворота карточек, проверка совпадений и управление состоянием игры.
+            </p>
+
+            <ul class="bullets">
+              <li>Сделал игровую логику: правила совпадений, тайминг и состояния.</li>
+              <li>Чистый <strong>JavaScript</strong> для DOM и событий.</li>
+              <li>Добавил уровни сложности и перезапуск.</li>
+              <li>Адаптивная сетка и визуальный feedback для пользователя.</li>
+            </ul>
+          </article>
+        </section>
+
+        <!-- Experience -->
+        <section class="card">
+          <div class="head">
+            <h2>Опыт</h2>
+            <span class="badge">Customer-facing</span>
+          </div>
+
+          <article class="item">
+            <div class="item-top">
+              <h3>Администратор</h3>
+              <div class="meta">2025 — 2026</div>
+            </div>
+
+            <ul class="bullets">
+              <li>Организовывал ежедневные процессы и координировал задачи сотрудников.</li>
+              <li>Работал с обращениями клиентов, быстро находил решения и снижал конфликтность.</li>
+              <li>Контролировал дисциплину и качество сервиса.</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="item-top">
+              <h3>Кассир / Продавец-консультант</h3>
+              <div class="meta">2024 — 2025</div>
+            </div>
+
+            <ul class="bullets">
+              <li>Работал с клиентами и проводил операции на кассе.</li>
+              <li>Развил коммуникацию, внимательность и стрессоустойчивость.</li>
+              <li>Сохранял точность и ответственность в потоке задач.</li>
+            </ul>
+          </article>
+        </section>
+
+        <!-- Education -->
+        <section class="card">
+          <div class="head">
+            <h2>Образование</h2>
+            <span class="badge">IT Student</span>
+          </div>
+
+          <article class="item">
+            <div class="item-top">
+              <h3>Ташкентский университет информационных технологий (TUIT)</h3>
+              <div class="meta">2023 — настоящее время</div>
+            </div>
+            <p class="sub">
+              Бакалавриат — Информационно-коммуникационные технологии (ICT Education) <br>
+              Фокус: веб-технологии, frontend-разработка и IT-образование
+            </p>
+          </article>
+        </section>
+
+        <!-- Soft Skills -->
+        <section class="card">
+          <div class="head">
+            <h2>Soft Skills</h2>
+            <span class="badge">Real-world</span>
+          </div>
+
+          <ul class="bullets bullets-tight">
+            <li>Коммуникация с клиентами и уточнение требований</li>
+            <li>Координация задач и ответственность за результат</li>
+            <li>Решение проблем в реальном времени</li>
+            <li>Надёжность и дисциплина</li>
+            <li>Тайм-менеджмент под нагрузкой</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- RIGHT -->
+      <aside class="col col-right">
+
+        <!-- Skills -->
+        <section class="card">
+          <div class="head">
+            <h2>Навыки</h2>
+            <span class="badge">Frontend</span>
+          </div>
+
+          <div class="chips">
+            <span class="chip">HTML5</span>
+            <span class="chip">CSS3</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Responsive UI</span>
+            <span class="chip">Grid / Flex</span>
+            <span class="chip">Forms & Validation</span>
+            <span class="chip">Landing Pages</span>
+            <span class="chip">Redirect / Thank-you</span>
+            <span class="chip">UTM Parameters</span>
+            <span class="chip">REST API</span>
+            <span class="chip">Async/Await</span>
+            <span class="chip">Git / GitHub</span>
+            <span class="chip">Code Review / Fix</span>
+            <span class="chip">React</span>
+            <span class="chip">Redux</span>
+            <span class="chip">Bootstrap</span>
+            <span class="chip">AI Tools</span>
+          </div>
+        </section>
+
+        <!-- UI / Figma -->
+        <section class="card">
+          <div class="head">
+            <h2>UI / Figma</h2>
+            <span class="badge">Design</span>
+          </div>
+
+          <ul class="bullets bullets-tight">
+            <li>Wireframes → UI-экраны → компоненты</li>
+            <li>Auto Layout, сетки и система отступов</li>
+            <li>Design handoff: размеры, стили, токены</li>
+            <li>Лендинги и dashboard UI</li>
+          </ul>
+        </section>
+
+        <!-- Certifications -->
+        <section class="card">
+          <div class="head">
+            <h2>Сертификаты</h2>
+            <span class="badge">Verified</span>
+          </div>
+
+          <article class="item">
+            <div class="item-top">
+              <h3>Google UX Design (Coursera)</h3>
+              <div class="meta">
+                <a href="https://coursera.org/share/a9b98982b2779f9d0d6d2ded27841988" target="_blank"
+                  rel="noreferrer">Проверить</a>
+              </div>
+            </div>
+
+            <p class="sub">
+              Основы UX и рабочий процесс дизайна: исследование, идеи и прототипирование.
+            </p>
+
+            <ul class="bullets bullets-tight">
+              <li>Фундамент UX-дизайна</li>
+              <li>Empathize / Define / Ideate</li>
+              <li>Wireframes и прототипы в Figma</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="item-top">
+              <h3>Generative AI for Everyone</h3>
+              <div class="meta">
+                <a href="https://coursera.org/share/86e3168ebbcb93a242887e44bead8485" target="_blank"
+                  rel="noreferrer">Проверить</a>
+              </div>
+            </div>
+
+            <p class="sub">
+              Практическое понимание GenAI и использование AI-инструментов для продуктивности.
+            </p>
+
+            <ul class="bullets bullets-tight">
+              <li>Основы generative AI и ограничения</li>
+              <li>Ответственное использование AI-инструментов</li>
+              <li>Ускорение обучения и разработки</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="item-top">
+              <h3>Agile Project Management</h3>
+              <div class="meta">
+                <a href="https://coursera.org/share/60365b416d680b84823e75592f209bfc" target="_blank"
+                  rel="noreferrer">Проверить</a>
+              </div>
+            </div>
+
+            <p class="sub">
+              Agile-подходы и основы командной работы в проектной среде.
+            </p>
+
+            <ul class="bullets bullets-tight">
+              <li>Scrum & Kanban</li>
+              <li>Планирование, приоритизация, коммуникация</li>
+            </ul>
+          </article>
+        </section>
+
+        <!-- Highlights -->
+        <section class="card">
+          <div class="head">
+            <h2>Ключевые акценты</h2>
+            <span class="badge">What I bring</span>
+          </div>
+
+          <div class="kv">
+            <div class="k">Фокус</div>
+            <div class="v">Конверсионные лендинги + чистый UI</div>
+          </div>
+          <div class="kv">
+            <div class="k">Сильные стороны</div>
+            <div class="v">Верстка + JS-логика (формы/состояния)</div>
+          </div>
+          <div class="kv">
+            <div class="k">Стек</div>
+            <div class="v">HTML/CSS/JS · React · Redux</div>
+          </div>
+          <div class="kv">
+            <div class="k">Цель</div>
+            <div class="v">Junior Frontend (Удалённо)</div>
+          </div>
+        </section>
+
+        <!-- Links -->
+        <section class="card">
+          <div class="head">
+            <h2>Ссылки</h2>
+            <span class="badge">Proof</span>
+          </div>
+
+          <div class="links">
+            <div>GitHub: <a href="https://github.com/abdulkarimnasimiy" target="_blank"
+                rel="noreferrer">abdulkarimnasimiy</a></div>
+            <div>Портфолио: <a href="https://nasimiy.netlify.app" target="_blank" rel="noreferrer">nasimiy.netlify.app</a>
+            </div>
+            <div>Retaylx Landing: <a href="https://retaylx-landing.netlify.app" target="_blank"
+                rel="noreferrer">live demo</a></div>
+            <div>ERP Platform: <a href="https://market-erp.netlify.app/" target="_blank" rel="noreferrer">live demo</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Languages -->
+        <section class="card">
+          <div class="head">
+            <h2>Языки</h2>
+            <span class="badge">Communication</span>
+          </div>
+
+          <div class="kv">
+            <div class="k">Узбекский</div>
+            <div class="v">Родной</div>
+          </div>
+          <div class="kv">
+            <div class="k">Русский</div>
+            <div class="v">Intermediate</div>
+          </div>
+          <div class="kv">
+            <div class="k">Английский</div>
+            <div class="v">Чтение тех. документации</div>
+          </div>
+        </section>
+
+      </aside>
+    </section>
+
+    <p class="foot">
+      Совет: откройте → <strong>Ctrl+P</strong> → “Save as PDF” (A4). Макет готов для печати.
+    </p>
+
+  </main>
+</body>
+
+</html>
